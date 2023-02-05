@@ -4,8 +4,5 @@ deployment:
     - export DEPLOYPATH=/home/yaneuayp/public_html/
     - /bin/cp -r * $DEPLOYPATH
 
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/yaneuayp/public_html/app
-    - /bin/cp /build/* $DEPLOYPATH
+    - export APPPATH=/home/yaneuayp/public_html/app
+    - /bin/cp /build/* $APPPATH
