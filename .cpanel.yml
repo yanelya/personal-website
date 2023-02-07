@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/yaneuayp/public_html/app
-    - /bin/cp /build/* $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH
 
