@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&display=swap');
+
+/* ALL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;  
+  gap: 2rem;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* CONTENT */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* min-height: 100vh; */
+}
+
+.container-padding {
+  padding: 5%;
+}
+
+.main-content{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* border: red solid; */
+  overflow: hidden;
+  flex: 1;
+}
+
+
+/* TITLES */
+.name-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.subtitle {
+  padding: 5%;
+}
+
+
+/* IMAGES */
+.images {
+  padding: 3%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.image-carousel {
+  padding: 5%;
+}
+
+
+/* TEXT CONTAINER */
+.text-area {
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+
+/* FORM */
+Form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+
+/* FOOTER */
+.socials {
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*MISC*/
+.bold-label {
+  font-weight: bold;
+}
+
+.signature {
+  overflow: hidden;
+}
+
+@media (max-width: 412px){
+
+}
+
+/*
+CSS NOTES WORTH NOTING
+
+setting marigin and padding to 0 i think is good practice bc 
+browser styling varies, so setting it that way allows your 
+website to override those rules.
+margins 0 -> all margins set to 0, same with padding ig
+
+rem unit is in relation to root element
+
+Use % for font sizes
+Use px for images
+Use px, %, or em for box sizes
+Use ratios for line height
+
+certain, fixed size, use PX
+scale with font-size, use EM
+scale to the available space in the window/container, use %
+
+*/
