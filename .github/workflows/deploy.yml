@@ -33,5 +33,6 @@ jobs:
         username: ${{ secrets.CPANEL_USERNAME }}
         key: ${{ secrets.DEPLOY_KEY }}
         port: 21098
+        passphrase: ${{ secrets.DEPLOY_PASSPHRASE }} 
         source: "build/"
         target: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
