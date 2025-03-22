@@ -24,7 +24,7 @@ jobs:
       with: 
         host: yanelyontheinternet.com
         username: ${{ secrets.CPANEL_USERNAME }}
-        key: ${{ secrets.CPANEL.SSH_KEY }}
+        key: ${{ secrets.DEPLOY_KEY }}
         port: 22
         source: "build/"
-        target: "/home/yanelya/public_html/"
+        target: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
