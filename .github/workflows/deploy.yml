@@ -18,7 +18,7 @@ jobs:
       run: npm install
 
     - name: Build project
-      uses: npm run build
+      run: npm run build
 
     - name: Deploy to server
       uses: appleboy/ssh-action@v1.0.3
