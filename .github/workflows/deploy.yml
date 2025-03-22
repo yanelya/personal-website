@@ -32,6 +32,6 @@ jobs:
         host: yanelyontheinternet.com
         username: ${{ secrets.CPANEL_USERNAME }}
         key: ${{ secrets.DEPLOY_KEY }}
-        port: 22
+        port: 21098
         source: "build/"
         target: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
