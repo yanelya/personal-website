@@ -33,6 +33,9 @@ jobs:
         username: ${{ secrets.CPANEL_USERNAME }}
         key: ${{ secrets.DEPLOY_KEY }}
         port: 21098
+        script: |
+          echo "Testing file upload with dry run..."
+          rsync -avz --dry-run build/ /home/${{ secrets.CPANEL_USERNAME }}/public_html/
         passphrase: ${{ secrets.DEPLOY_PASSPHRASE }} 
         source: "build/"
         target: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
