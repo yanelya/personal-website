@@ -41,7 +41,6 @@ jobs:
         passphrase: ${{ secrets.DEPLOY_PASSPHRASE }} 
         source: "build/"
         target: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
-        script: |
-          echo "✅ Checking for build folder..."
-          ls -la /home/${{ secrets.CPANEL_USERNAME }}
-          ls -la /home/${{ secrets.CPANEL_USERNAME }}/build
+       script: |
+          echo "✅ Deploying build folder..."
+          rsync -avz build/ /home/${{ secrets.CPANEL_USERNAME }}/public_html/
