@@ -30,6 +30,11 @@ jobs:
       run: |
         echo "✅ Checking build folder..."
         ls -la build/
+    
+    - name: Dry-run rsync
+      run: |
+        echo "✅ Running rsync dry run..."
+        rsync -avz --dry-run build/ /home/${{ secrets.CPANEL_USERNAME }}/public_html/
 
     - name: Deploy to server
       uses: appleboy/ssh-action@v1.0.3
