@@ -37,13 +37,6 @@ jobs:
         source: "build/"
         target: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
         script: |
-          echo "✅ Deploying build..."
-          
-          # Add a unique timestamp file during deployment
-          echo "Deployed at $(date)" > build/deployment.txt
-
-          # Upload the build with the timestamp file
-          rsync -avz --progress build/ /home/${{ secrets.CPANEL_USERNAME }}/public_html/
-
-          # Verify the unique file was uploaded
-          ls -la /home/${{ secrets.CPANEL_USERNAME }}/public_html/deployment.txt
+          echo "✅ Checking for build folder..."
+          ls -la /home/${{ secrets.CPANEL_USERNAME }}
+          ls -la /home/${{ secrets.CPANEL_USERNAME }}/build
