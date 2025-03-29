@@ -33,9 +33,17 @@ jobs:
         username: ${{ secrets.CPANEL_USERNAME }}
         key: ${{ secrets.DEPLOY_KEY }}
         port: 21098
-        script: |
-          echo "Testing file upload with dry run..."
-          rsync -avz --dry-run build/ /home/${{ secrets.CPANEL_USERNAME }}/public_html/
         passphrase: ${{ secrets.DEPLOY_PASSPHRASE }} 
         source: "build/"
         target: "/home/${{ secrets.CPANEL_USERNAME }}/public_html/"
+        script: |
+          echo "✅ Deploying build..."
+          
+          # Add a unique timestamp file during deployment
+          echo "Deployed at $(date)" > build/deployment.txt
+
+          # Upload the build with the timestamp file
+          rsync -avz --progress build/ /home/${{ secrets.CPANEL_USERNAME }}/public_html/
+
+          # Verify the unique file was uploaded
+          ls -la /home/${{ secrets.CPANEL_USERNAME }}/public_html/deployment.txt
