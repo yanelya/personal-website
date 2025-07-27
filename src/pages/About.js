@@ -11,23 +11,24 @@ import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
-    <div>
+    <Container noPadding>
       <h1 className='subtitle'>about me.</h1>
 
       <StyledContainer noPadding>
         <CarouselSlider />
        
-        <BlogsContainer>
+        <BlogsContainer noTextAlign>
           <Subtitle>blogs.</Subtitle> 
           <StyledLink to='/readme'>readme.md</StyledLink>
           <StyledLink to='/so-youre-thinking-of-quitting'>so you're thinking about quitting.</StyledLink>
+          <StyledLink to='/figuring-out-adulthood-as-a-first-gen-hispanic-american-girl'>figuring out adulthood as a first gen hispanic american girl.</StyledLink>
         </BlogsContainer>
       </StyledContainer>
       
       <div className='footer'>
         <Socials />
       </div>
-    </div>
+    </Container>
   )
 }
 
@@ -54,6 +55,7 @@ const StyledContainer = styled(Container)`
       align-items: center;
       max-width: 1000px;
       padding-top: 0px;
+      gap: 5rem;
   }
 `;
 

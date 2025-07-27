@@ -49,7 +49,7 @@ export const ContactForm = () => {
     };
   
   return (
-    <StyledContainer>
+    <>
       <img src={ascii1}/>
       <Form ref={form} onSubmit={handleSubmit}>
         <Form.Field
@@ -82,25 +82,6 @@ export const ContactForm = () => {
         
           <Button type='submit' color='black'>submit</Button>
       </Form>
-    </StyledContainer>
+    </>
   )
 }
-
-
-const StyledContainer = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  padding: 0%;
-  img {
-    padding-top: 0px;
-  }
-  label {
-    text-align: left;
-  }
-
-  @media screen and (min-width: 800px) {
-    display: flex;
-    align-items: center;
-    flex: 1;
-  }
-`;

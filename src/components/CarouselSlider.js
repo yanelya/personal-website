@@ -2,7 +2,7 @@ import React from 'react'
 
 import mainHeadshot from '../images/work_headshot.jpeg'
 import grad1 from '../images/grad1.jpg'
-import headshot from '../images/headshot.jpg'
+import lilme from '../images/lilme.jpg'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
@@ -29,7 +29,7 @@ const CarouselSlider = () => {
             <img src={grad1} alt='graduation' />
         </div>
         <div>
-            <img src={headshot} alt='headshot' />
+            <img src={lilme} alt='lilme' />
         </div>
         </StyledCarousel> 
     </StyledContainer>

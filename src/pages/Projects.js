@@ -6,7 +6,7 @@ import Container from '../components/Container'
 
 const Projects = () => {
   return (
-    <div>
+    <Container noTopPadding>
         <h1 className='subtitle'>projects.</h1>
 
         <StyledContainer noTopPadding>
@@ -19,7 +19,7 @@ const Projects = () => {
           </ul>
         </StyledContainer>
 
-        <StyledContainer noTopPadding>
+        <Container>
           {/* <h3>global website</h3>
           <ul>
             <li>collaborated with design/marketing/content team to support region-based site</li>
@@ -27,14 +27,12 @@ const Projects = () => {
             <li>utilized headless CMS to allow content and marketing team create templatized pages</li>
           </ul> */}
           <h3 > page still pending... </h3>
-        </StyledContainer>
-
-        
-    </div>
+        </Container>
+    </Container>
   )
 }
 
-const StyledContainer = styled(Container)`
+const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
 

@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 
 import styled from 'styled-components'
 
 import Container from '../components/Container'
+import FullscreenImage from '../components/FullscreenImage'
+import ClickableImage from '../components/ClickableImage'
 
 import drawing  from '../images/entry2non-transparent.jpeg'
 
@@ -20,18 +22,13 @@ const Entry2 = () => {
       </p>
 
       <p>
-        we are <u>wired</u> to self preserve, but this way of thinking is what
-        holds us down from our potential.
-      </p>
-
-      <p>
         one could argue that the <b>risk</b> of <u>not doing something</u> is
         actually <b>worse</b> than <u>doing it and getting the worst outcome.</u>
       </p>
 
-      <p>so ask yourself, <em>"what if i fail?"</em></p>
+      <p><em>"what if i fail?"</em></p>
 
-      <p>the outcome, though not desirable, is really not that bad.</p>
+      <p>the outcome, though not desirable, is really <u>not that bad.</u></p>
 
       <p>ok...i got fired, but i gave it my best and maybe that line of work was just not for me.</p>
 
@@ -46,7 +43,7 @@ const Entry2 = () => {
       <em>"if i fail, so what?"</em>
       <br></br>
 
-      <Image src={drawing} onClick={() => setFullscreenSrc(drawing)}/>
+      <ClickableImage src={drawing} onClick={() => setFullscreenSrc(drawing)}/>
 
       {fullscreenSrc && (
         <FullscreenImage onClick={() => setFullscreenSrc(null)}>
@@ -62,34 +59,5 @@ const Entry2 = () => {
     </Container>
   )
 }
-
-const Image = styled.img`
-  width: 200px;
-  cursor: pointer;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-const FullscreenImage = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-
-  img {
-    max-width: 90%;
-    max-height: 90%;
-    cursor: pointer;
-  }
-`;
 
 export default Entry2
